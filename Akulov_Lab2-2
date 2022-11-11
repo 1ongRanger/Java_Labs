@@ -1,0 +1,28 @@
+import java.lang.*;
+import java.util.Scanner;
+import java.lang.String;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        boolean t;
+        Calculator expText = new Calculator();
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите выражение: ");
+        String strr = in.nextLine();
+
+        expText.setStr(strr);
+        t = expText.count();
+
+        if( !t)
+        {
+            System.out.print("Выражение некорректно.");
+        }
+        else{
+        System.out.print(strr + " = ");
+        expText.printExp();
+        }
+    }
+}
